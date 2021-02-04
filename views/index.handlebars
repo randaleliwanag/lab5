@@ -15,23 +15,21 @@
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link href="css/hci-friends.css" rel="stylesheet">
 
 <body>
 	<div class="container">
 		<h1>My HCI Friends</h1>
 
-		<div class="friend">
 			{{#each friends}}
 			<div class="friend">
 				<img src={{imageURL}} class="img-responsive img-rounded">
-				<h3>{{name}}</h3>
+				<h3><a href = "#" class = "friend-name">{{name}}</a></h3>
 				<p>{{description}}</p>
 				<hr>
 			</div>
 			{{/each}}
-		</div>
 
 		<form id="addFriendForm" role="form" method="get" action="/add">
 			<h3>Add a friend</h3>
